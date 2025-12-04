@@ -1,0 +1,92 @@
+'use client';
+
+import {useTranslations} from 'next-intl';
+import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+
+export default function ContactPage() {
+  const t = useTranslations('contactPage');
+
+  const openWhatsApp = () => {
+    window.open('https://wa.me/6281588333382', '_blank');
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      
+      <main className="flex-grow bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#e83d96]">{t('title')}</h1>
+            <p className="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">{t('subtitle')}</p>
+            <div className="mt-4 h-1 w-24 bg-pink-200 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-stretch">
+            {/* Kolom Kiri: Info Kontak */}
+            <div className="w-full bg-white p-6 rounded-xl shadow-lg border border-gray-200/80 flex flex-col h-full lg:col-span-2">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">{t('company')}</h2>
+              <div className="space-y-5">
+                <div className="flex items-start gap-4">
+                  <MapPinIcon className="w-6 h-6 text-[#e83d96] mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-gray-800 text-base">{t('addressTitle')}</h3>
+                    <p className="text-gray-600 text-sm">{t('addressValue')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <PhoneIcon className="w-6 h-6 text-[#e83d96] mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-gray-800 text-base">{t('phone')}</h3>
+                    <p className="text-gray-600 text-sm">+62 815-8833-382</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <EnvelopeIcon className="w-6 h-6 text-[#e83d96] mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-gray-800 text-base">{t('email')}</h3>
+                    <p className="text-gray-600 text-sm break-all">hawatrans@yahoo.com</p>
+                    <p className="text-gray-600 text-sm break-all">hawatranslations@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 flex justify-center">
+                <button onClick={openWhatsApp} className="max-w-xs bg-green-500 text-white py-2.5 px-5 rounded-lg hover:bg-green-600 transition flex items-center justify-center gap-2 text-base font-semibold shadow-md">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                {t('whatsappButton')}
+              </button>
+              </div>
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <h4 className="text-center font-semibold text-gray-700 mb-4">{t('paymentTitle')}</h4>
+                <div className="flex justify-center items-center gap-4">
+                  <div className="bg-gray-50 p-3 rounded-lg shadow-sm flex justify-center items-center w-28 h-16">
+                    <img src="/images/bca.png" alt="BCA" className="h-10 object-contain" />
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-lg shadow-sm flex justify-center items-center w-28 h-16">
+                    <img src="/images/mandiri.png" alt="Bank Mandiri" className="h-10 object-contain" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Peta Lokasi */}
+            <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200/80 h-full lg:col-span-3">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.694668269643!2d106.83699497474616!3d-6.303944993685036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed5df538336d%3A0x8494241594a4374!2sJl.%20Swadaya%20II%2C%20RT.1%2FRW.6%2C%20Tj.%20Bar.%2C%20Kec.%20Jagakarsa%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012530!5e0!3m2!1sen!2sid!4v1716543210987!5m2!1sen!2sid" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

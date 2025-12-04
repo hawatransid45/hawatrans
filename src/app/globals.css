@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  /* UBAH: Menggunakan system font stack yang modern dan rapi */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-heading: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --foreground: #000000;
+  --primary: #e83d96;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+    --primary: #e83d96;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  /* UBAH: Menerapkan font dasar untuk body */
+  font-family: var(--font-sans);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* UBAH: Menambahkan gaya tipografi dasar */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    /* PERBAIKI: Terapkan variabel font secara langsung, bukan via @apply */
+    font-family: var(--font-heading);
+    @apply tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl font-extrabold md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl font-bold md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl font-bold md:text-3xl;
+  }
+
+  p {
+    @apply text-base text-gray-700 leading-relaxed;
+  }
+}
+
+/* PERBAIKI: Tambahkan definisi animasi untuk progress bar carousel */
+@keyframes fill-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
