@@ -15,8 +15,8 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 // Demo credentials - in production, use proper authentication
 const ADMIN_CREDENTIALS = {
-  username: 'admin',
-  password: 'admin123',
+  username: process.env.NEXT_PUBLIC_ADMIN_USERNAME ,
+  password: process.env.NEXT_PUBLIC_ADMIN_PASSWORD ,
   role: 'admin'
 };
 
