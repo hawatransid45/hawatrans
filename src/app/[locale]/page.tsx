@@ -1,4 +1,5 @@
-import {useTranslations} from 'next-intl';
+import {getTranslations} from 'next-intl/server';
+import {setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/routing';
 /* PERBAIKI: Mengimpor ikon dari @heroicons/react/24/outline untuk gaya yang lebih minimalis */
 import { DocumentTextIcon, ChatBubbleLeftRightIcon, ShieldCheckIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
@@ -6,8 +7,17 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ImageCarousel from '@/components/ImageCarousel';
 
-export default function HomePage() {
-  const t = useTranslations('homepage');
+type Props = {
+  params: Promise<{locale: string}>;
+};
+
+export default async function HomePage({params}: Props) {
+  const {locale} = await params;
+  
+  // Enable static rendering
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('homepage');
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">

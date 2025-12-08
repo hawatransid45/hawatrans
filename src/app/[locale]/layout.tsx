@@ -1,5 +1,6 @@
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
+import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import {AuthProvider} from '@/contexts/AuthContext';
@@ -23,13 +24,16 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  const messages = await getMessages({locale});
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <head />
       <body suppressHydrationWarning>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={messages} locale={locale}>
           <AuthProvider>
             <BlogProvider>
               {children}
