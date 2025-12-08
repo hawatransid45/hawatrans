@@ -62,11 +62,11 @@ export default function AdminLoginPage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-1">{t('usernameLabel')}</label>
-              <input type="text" id="username" value={formData.username} onChange={(e) => setFormData({...formData, username: e.target.value})} required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e83d96] text-black bg-white" />
+              <input type="text" id="username" autoComplete="username" value={formData.username} onChange={(e) => setFormData({...formData, username: e.target.value})} required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e83d96] text-black bg-white" />
             </div>
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">{t('passwordLabel')}</label>
-              <input type="password" id="password" value={formData.password} onChange={(e) => setFormData({...formData, password: e.target.value})} required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e83d96] text-black bg-white" />
+              <input type="password" id="password" autoComplete="current-password" value={formData.password} onChange={(e) => setFormData({...formData, password: e.target.value})} required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e83d96] text-black bg-white" />
             </div>
             <button type="submit" className="w-full bg-[#e83d96] text-white py-3 px-6 rounded-lg hover:bg-pink-700 transition text-base font-semibold shadow-md">
               {t('loginButton')}
