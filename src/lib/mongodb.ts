@@ -35,8 +35,9 @@ async function dbConnect() {
       bufferCommands: false,
     };
 
-    console.log('Connecting to MongoDB...');
-    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
+   console.log('Connecting to MongoDB...');
+    // TypeScript assertion: we know MONGODB_URI exists because we checked above
+    cached.promise = mongoose.connect(MONGODB_URI as string, opts).then((mongoose) => {
       console.log('MongoDB connected successfully');
       return mongoose;
     });
