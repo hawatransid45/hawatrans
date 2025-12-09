@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodb';
 import ServiceContent from '@/models/ServiceContent';
 
+// Disable caching untuk endpoint ini
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 // GET all service content
 export async function GET(request: NextRequest) {
   try {

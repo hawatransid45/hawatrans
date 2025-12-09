@@ -28,7 +28,14 @@ export function BlogProvider({children}: {children: React.ReactNode}) {
     try {
       setLoading(true);
       const url = locale ? `/api/blog?locale=${locale}` : '/api/blog';
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        cache: 'no-store',
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+        },
+      });
       const data = await response.json();
       
       if (data.success) {

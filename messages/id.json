@@ -109,6 +109,7 @@
     "placeholderGeneral": "Harga General",
     "placeholderSworn": "Harga Sworn",
     "negotiableNote": "Note: Harga tersebut diatas sewaktu-waktu dapat berubah dan bisa dinegosiasikan.",
+    "priceListTitle": "Layanan Terjemahan",
     "translationStandard": "Standard Terjemahan",
     "translationStandardDesc": "Standard Terjemahan dihitung berdasarkan hasil terjemahan dengan format:",
     "formatPaper": "Diketik di kertas A4,",
@@ -136,7 +137,8 @@
     "apostilleDoc1": "Ijazah & Transkrip Nilai",
     "apostilleDoc2": "Akta Lahir & Perkawinan",
     "apostilleDoc3": "Surat Kuasa",
-    "apostilleDoc4": "Dokumen Perdata Lainnya"
+    "apostilleDoc4": "Dokumen Perdata Lainnya",
+    "askPrice": "Tanya Harga"
   },
   "servicesContact": {
     "title": "Hubungi Kami",

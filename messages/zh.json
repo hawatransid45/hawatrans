@@ -104,6 +104,7 @@
     "placeholderGeneral": "普通价格",
     "placeholderSworn": "宣誓价格",
     "negotiableNote": "注意：以上价格可能会有变动，并可协商。",
+    "priceListTitle": "翻译服务",
     "translationStandard": "翻译标准",
     "translationStandardDesc": "翻译标准根据以下格式的翻译结果计算：",
     "formatPaper": "在A4纸上打字，",
@@ -131,7 +132,8 @@
     "apostilleDoc1": "文凭和成绩单",
     "apostilleDoc2": "出生和结婚证书",
     "apostilleDoc3": "授权书",
-    "apostilleDoc4": "其他民事文件"
+    "apostilleDoc4": "其他民事文件",
+    "askPrice": "询问价格"
   },
   "homepage": {
     "heroTitle": "快速可靠的文件合法化服务",

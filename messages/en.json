@@ -91,6 +91,7 @@
     "placeholderGeneral": "General Price",
     "placeholderSworn": "Sworn Price",
     "negotiableNote": "Note: The prices above are subject to change and can be negotiated.",
+    "priceListTitle": "Translation Services",
     "translationStandard": "Translation Standard",
     "translationStandardDesc": "The translation standard is calculated based on the translated result with the format:",
     "formatPaper": "Typed on A4 paper,",
@@ -118,7 +119,8 @@
     "apostilleDoc1": "Diplomas & Transcripts",
     "apostilleDoc2": "Birth & Marriage Certificates",
     "apostilleDoc3": "Power of Attorney",
-    "apostilleDoc4": "Other Civil Documents"
+    "apostilleDoc4": "Other Civil Documents",
+    "askPrice": "Ask Price"
   },
   "homepage": {
     "heroTitle": "Fast & Reliable Document Legalization Services",

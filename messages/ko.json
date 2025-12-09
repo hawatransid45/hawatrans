@@ -103,6 +103,7 @@
     "placeholderGeneral": "일반 가격",
     "placeholderSworn": "선서 가격",
     "negotiableNote": "참고: 위 가격은 변경될 수 있으며 협상 가능합니다.",
+    "priceListTitle": "번역 서비스",
     "translationStandard": "번역 기준",
     "translationStandardDesc": "번역 기준은 다음 형식으로 번역된 결과를 기준으로 계산됩니다:",
     "formatPaper": "A4 용지에 타이핑,",
@@ -130,7 +131,8 @@
     "apostilleDoc1": "졸업장 및 성적 증명서",
     "apostilleDoc2": "출생 및 결혼 증명서",
     "apostilleDoc3": "위임장",
-    "apostilleDoc4": "기타 민사 문서"
+    "apostilleDoc4": "기타 민사 문서",
+    "askPrice": "가격 문의"
   },
   "homepage": {
     "heroTitle": "빠르고 신뢰할 수 있는 문서 합법화 서비스",

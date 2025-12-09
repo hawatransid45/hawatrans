@@ -103,6 +103,7 @@
     "placeholderGeneral": "一般料金",
     "placeholderSworn": "宣誓料金",
     "negotiableNote": "注：上記の価格は予告なく変更される場合があり、交渉可能です。",
+    "priceListTitle": "翻訳サービス",
     "translationStandard": "翻訳基準",
     "translationStandardDesc": "翻訳基準は、以下の形式で翻訳された結果に基づいて計算されます：",
     "formatPaper": "A4用紙にタイプされ、",
@@ -130,7 +131,8 @@
     "apostilleDoc1": "卒業証書と成績証明書",
     "apostilleDoc2": "出生証明書と結婚証明書",
     "apostilleDoc3": "委任状",
-    "apostilleDoc4": "その他の民事文書"
+    "apostilleDoc4": "その他の民事文書",
+    "askPrice": "価格を問い合わせる"
   },
   "homepage": {
     "heroTitle": "迅速で信頼性の高い文書合法化サービス",

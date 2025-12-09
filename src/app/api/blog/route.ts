@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodb';
 import BlogPost from '@/models/BlogPost';
 
+// Disable caching untuk endpoint ini
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 // GET all blog posts or filter by locale
 export async function GET(request: NextRequest) {
   try {
