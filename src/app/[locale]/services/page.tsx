@@ -31,8 +31,8 @@ export default function ServicesPage() {
   const tc = useTranslations('servicesContact');
   const { isAuthenticated } = useAuth();
   
-  // === DATA DEFAULT (Static) ===
-  const defaultServices = [
+  // === DATA DEFAULT (Static) - Gunakan useMemo agar tidak berubah di setiap render ===
+  const defaultServices = useMemo(() => [
     { id: '1', number: 1, language: 'Inggris', generalPrice: 'Hubungi WA', swornPrice: 'Hubungi WA' },
     { id: '2', number: 2, language: 'Arab', generalPrice: 'Hubungi WA', swornPrice: 'Hubungi WA' },
     { id: '3', number: 3, language: 'Mandarin - Indonesia', generalPrice: 'Hubungi WA', swornPrice: 'Hubungi WA' },
@@ -46,7 +46,7 @@ export default function ServicesPage() {
     { id: '11', number: 11, language: 'Portugis', generalPrice: 'Hubungi WA', swornPrice: 'Hubungi WA' },
     { id: '12', number: 12, language: 'Italia', generalPrice: 'Hubungi WA', swornPrice: 'Hubungi WA' },
     { id: '13', number: 13, language: 'Vietnam', generalPrice: 'Hubungi WA', swornPrice: 'Hubungi WA' },
-  ];
+  ], []);
 
   // Default Konten Prosedur (Sebelah Contact Us)
   const defaultProsedurContent = `
@@ -148,23 +148,13 @@ export default function ServicesPage() {
           if (validServices.length > 0) {
             setServices(validServices);
           } else {
-            // Jika semua data invalid, gunakan default dan save
+            // Jika semua data invalid, gunakan default saja (JANGAN auto-save)
             setServices(defaultServices);
-            await fetch('/api/services/prices', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ services: defaultServices })
-            });
           }
         } else {
-          // Jika database kosong, gunakan default dan save ke database
+          // Jika database kosong, gunakan default saja (JANGAN auto-save)
+          // Admin bisa klik "Reset Data" jika mau save default services
           setServices(defaultServices);
-          // Auto-save default services to database
-          await fetch('/api/services/prices', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ services: defaultServices })
-          });
         }
       } catch (error) {
         console.error('Failed to load services:', error);
@@ -332,23 +322,30 @@ export default function ServicesPage() {
       swornPrice: 'Hubungi WA' // Default value
     };
     const updatedServices = [...services, newService];
-    setServices(updatedServices);
     
     // Save to database
     try {
-      await fetch('/api/services/prices', {
+      const response = await fetch('/api/services/prices', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ services: updatedServices })
       });
-      alert('✅ Layanan baru berhasil ditambahkan!');
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        // Update state dengan data dari database
+        setServices(updatedServices);
+        setIsAdding(false);
+        setNewServiceData({ language: '', generalPrice: '', swornPrice: '' });
+        alert('✅ Layanan baru berhasil ditambahkan!');
+      } else {
+        alert('❌ Gagal menyimpan: ' + (data.error || 'Unknown error'));
+      }
     } catch (error) {
       console.error('Failed to save new service:', error);
       alert('❌ Gagal menyimpan layanan baru. Silakan coba lagi.');
     }
-    
-    setIsAdding(false);
-    setNewServiceData({ language: '', generalPrice: '', swornPrice: '' });
   };
 
   const handleDeleteService = async (id: string) => {
@@ -390,7 +387,10 @@ export default function ServicesPage() {
     if (lang.includes('portugis')) return 'PT';
     if (lang.includes('italia')) return 'IT';
     if (lang.includes('vietnam')) return 'VN';
-    return '??';
+    if (lang.includes('thailand')) return 'TH';
+    
+    // Default: ambil 2 huruf pertama dari nama bahasa (uppercase)
+    return language.substring(0, 2).toUpperCase();
   };
 
   // Helper function untuk mendapatkan warna badge berdasarkan bahasa
@@ -407,7 +407,10 @@ export default function ServicesPage() {
     if (lang.includes('portugis')) return 'bg-emerald-600';
     if (lang.includes('italia')) return 'bg-teal-600';
     if (lang.includes('vietnam')) return 'bg-cyan-600';
-    return 'bg-gray-600';
+    if (lang.includes('thailand')) return 'bg-purple-600';
+    // Default: warna acak berdasarkan panjang nama
+    const colors = ['bg-blue-600', 'bg-green-600', 'bg-red-600', 'bg-yellow-600', 'bg-indigo-600', 'bg-pink-600'];
+    return colors[language.length % colors.length];
   };
 
   const handleAddNewService = () => {
