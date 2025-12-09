@@ -198,7 +198,7 @@ export default function ServicesPage() {
     };
 
     loadContent();
-  }, []);
+  }, [defaultServices]);
 
   // Load contact settings
   useEffect(() => {
@@ -692,7 +692,7 @@ export default function ServicesPage() {
                         ) : (
                           <div className="text-sm text-gray-700">
                             <p className="font-semibold">Nomor saat ini: <span className="text-green-600">{whatsappNumberFormatted}</span></p>
-                            <p className="text-xs text-gray-500 mt-1">Nomor ini akan digunakan di semua tombol "Tanya Harga"</p>
+                            <p className="text-xs text-gray-500 mt-1">Nomor ini akan digunakan di semua tombol &quot;Tanya Harga&quot;</p>
                           </div>
                         )}
                       </div>
