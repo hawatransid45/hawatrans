@@ -174,7 +174,7 @@ export default function BlogPage() {
             </div>
           ) : (
             <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-gray-300">
-              <p className="text-xl text-gray-400 font-medium">Belum ada artikel yang cocok dengan "{searchQuery}"</p>
+              <p className="text-xl text-gray-400 font-medium">Belum ada artikel yang cocok dengan &quot;{searchQuery}&quot;</p>
               <button 
                 onClick={() => setSearchQuery('')}
                 className="mt-4 text-[#e83d96] font-bold hover:underline"
