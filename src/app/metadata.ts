@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://company-website.com'),
+  metadataBase: new URL('https://hawatrans.id'),
   title: {
-    default: 'Company - Innovative Business Solutions',
-    template: '%s | Company'
+    default: 'Hawatrans.id - Solusi Bisnis Inovatif',
+    template: '%s | Hawatrans.id'
   },
   description: 'We deliver innovative solutions for your business. Digital transformation, consulting, and strategic planning services.',
   keywords: ['business solutions', 'digital transformation', 'consulting', 'innovation', 'technology', 'AI', 'machine learning', 'cloud computing', 'cybersecurity'],
   authors: [{ name: 'Company Team' }],
   creator: 'Company',
   publisher: 'Company',
+  icons: {
+    icon: '/images/logo hawatrans.jpeg', // atau path ke logo Anda
+    shortcut: '/images/logo hawatrans.jpeg',
+    apple: '/images/logo hawatrans.jpeg',
+  },
   openGraph: {
     type: 'website',
     locale: 'id_ID',

@@ -32,7 +32,7 @@ export default function ImageCarousel() {
     // UBAH: Tambahkan 'relative' agar progress bar bisa diposisikan absolut terhadap kontainer ini
     <div className="w-full h-full relative"> {/* Kontainer ini harus mendapatkan tinggi dari parent */}
       <Slider {...settings} className="h-full"> {/* PERBAIKI: Tambahkan h-full ke Slider */}
-        {/* Slide 1: hawa trans.jpg (BARU & PERTAMA) */}
+        {/* Slide 1: hawa trans.jpg (tetap dipertahankan) */}
         {/* PERBAIKI: Menggunakan aspect-ratio untuk ukuran yang konsisten */}
         <div className="w-full">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
@@ -44,23 +44,34 @@ export default function ImageCarousel() {
           </div>
         </div>
 
-        {/* Slide 2: translation service.jpg */}
+        {/* Slide 2: hawatrans 1.jpeg */}
         <div className="w-full">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
             <img
-              src="/images/translation%20service.jpg"
-              alt="Layanan Penerjemah Dokumen"
+              src="/images/hawatrans%201.jpeg"
+              alt="Hawatrans Profesional"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
         </div>
 
-        {/* Slide 3: validation service.jpg */}
+        {/* Slide 3: hawatrans 2.jpeg */}
         <div className="w-full">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
             <img
-              src="/images/validation%20service.jpg"
-              alt="Layanan Validasi Dokumen"
+              src="/images/hawatrans%202.jpeg"
+              alt="Layanan Penerjemah Tersumpah"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Slide 4: hawatrans 4.jpeg */}
+        <div className="w-full">
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
+            <img
+              src="/images/hawatrans%204.jpeg"
+              alt="Jasa Terjemahan Profesional"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>

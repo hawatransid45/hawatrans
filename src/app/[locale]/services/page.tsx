@@ -487,10 +487,19 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           
           {/* Header & Contact Box */}
-          <div className="mb-12 text-center">
+          <div className="mb-8 text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-[#e83d96]">{t('professionalServices')}</h1>
             <p className="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">{t('comprehensiveSolution')}</p>
             <div className="mt-4 h-1 w-24 bg-pink-200 mx-auto rounded-full"></div>
+          </div>
+
+          {/* Gambar Hawatrans 3 di Tengah */}
+          <div className="mb-12 flex justify-center">
+            <img 
+              src="/images/hawatrans%203.jpeg" 
+              alt="Proses Penerjemahan - Laptop & HP" 
+              className="w-full max-w-4xl h-80 object-cover rounded-2xl shadow-2xl"
+            />
           </div>
 
           {/* === BAGIAN LAYANAN (BENTUK TAB) === */}

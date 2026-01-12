@@ -54,19 +54,35 @@ export default function AboutPage() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navigation />
       <main className="flex-grow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="bg-white p-8 rounded-xl shadow-lg text-center mb-8">
-            <h1 className="text-3xl font-bold mb-6 text-[#e83d96]">{t('title')}</h1>
-            <p className="text-lg text-gray-700 leading-relaxed text-justify mb-10">
-              {t.rich('description', {
-                strong: (chunks) => <strong className="text-[#e83d96]">{chunks}</strong>,
-              })}
-            </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          {/* Hero Section */}
+          <div className="bg-white p-6 rounded-xl shadow-lg mb-6">
+            {/* Grid 2 Kolom: Judul+Deskripsi | Gambar */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center mb-6">
+              {/* Kolom Kiri: Judul + Teks */}
+              <div className="flex flex-col justify-center text-center">
+                <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-[#e83d96]">{t('title')}</h1>
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                  {t.rich('description', {
+                    strong: (chunks) => <strong className="text-[#e83d96]">{chunks}</strong>,
+                  })}
+                </p>
+              </div>
+              
+              {/* Kolom Kanan: Gambar */}
+              <div className="flex justify-center lg:justify-end h-full">
+                <img 
+                  src="/images/hawatrans%205.jpeg" 
+                  alt="Hawatrans Official Sworn Translator" 
+                  className="rounded-2xl shadow-2xl w-full h-full max-w-xs object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
 
-            {/* Stats Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="flex items-center justify-center gap-4">
-                <div className="bg-pink-100 p-3 rounded-full">
+            {/* Stats Section - Tetap di Tengah */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
+              <div className="flex items-center justify-center gap-3">
+                <div className="bg-pink-100 p-2 rounded-full">
                   <GlobeIcon />
                 </div>
                 <div>
@@ -74,8 +90,8 @@ export default function AboutPage() {
                   <p className="text-md text-gray-600 text-left">{t('languagesAvailable')}</p>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-4">
-                <div className="bg-pink-100 p-3 rounded-full">
+              <div className="flex items-center justify-center gap-3">
+                <div className="bg-pink-100 p-2 rounded-full">
                   <DocumentIcon />
                 </div>
                 <div>
@@ -83,8 +99,8 @@ export default function AboutPage() {
                   <p className="text-md text-gray-600 text-left">{t('docsTranslated')}</p>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-4">
-                <div className="bg-pink-100 p-3 rounded-full">
+              <div className="flex items-center justify-center gap-3">
+                <div className="bg-pink-100 p-2 rounded-full">
                   <ShieldIcon />
                 </div>
                 <div>
@@ -96,11 +112,11 @@ export default function AboutPage() {
           </div>
 
           {/* Advantages Section */}
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-center mb-6 text-[#e83d96]">{t('advantagesTitle')}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-[#e83d96]">{t('advantagesTitle')}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
               {advantages.map((advantage, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
+                <div key={index} className="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
                   <div className="flex justify-center mb-4">
                     <div className="bg-pink-100 p-3 rounded-full">
                       {advantage.icon}

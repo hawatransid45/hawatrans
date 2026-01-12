@@ -7,6 +7,8 @@ import {AuthProvider} from '@/contexts/AuthContext';
 import {BlogProvider} from '@/contexts/BlogContext';
 import '../globals.css';
 
+export { metadata } from '../metadata';
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
 }

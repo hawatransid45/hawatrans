@@ -9,6 +9,9 @@ import ProtectedRoute from '@/components/ProtectedRoute';
 import {useBlog} from '@/contexts/BlogContext';
 import {useAuth} from '@/contexts/AuthContext';
 
+// ✅ 1. IMPORT EDITOR DISINI
+import TextEditor from '@/components/TextEditor';
+
 function CreateBlogContent() {
   const router = useRouter();
   const params = useParams();
@@ -27,6 +30,12 @@ function CreateBlogContent() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Validasi manual karena TextEditor bukan input HTML biasa
+    if (!formData.content || formData.content === '<p><br></p>') {
+        alert('Konten artikel tidak boleh kosong!');
+        return;
+    }
+
     const slug = formData.title
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, '-')
@@ -35,7 +44,7 @@ function CreateBlogContent() {
     const success = await addPost({
       title: formData.title,
       excerpt: formData.excerpt,
-      content: formData.content,
+      content: formData.content, // Ini sekarang berisi HTML dari TextEditor
       author: user?.username || 'Admin',
       slug: `${slug}-${Date.now()}`,
       locale: locale as 'en' | 'id' | 'ko' | 'zh' | 'ja',
@@ -91,20 +100,29 @@ function CreateBlogContent() {
                 />
               </div>
 
+              {/* ✅ BAGIAN INI YANG BERUBAH TOTAL */}
               <div>
-                <label htmlFor="content" className="block text-sm font-semibold text-gray-800 mb-2">
+                <label className="block text-sm font-semibold text-gray-800 mb-2">
                   {t('contentField')}
                 </label>
-                <textarea
-                  id="content"
-                  value={formData.content}
-                  onChange={(e) => setFormData({...formData, content: e.target.value})}
-                  rows={18}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#e83d96] text-black bg-white"
-                  required
-                />
-                <p className="text-xs text-gray-500 mt-2">{t('markdownHelper')}</p>
+                
+                {/* Kita bungkus dengan border agar rapi */}
+                <div className="border border-gray-300 rounded-lg overflow-hidden bg-white">
+                    <TextEditor 
+                        value={formData.content}
+                        // TextEditor langsung mengirim string, bukan event (e)
+                        onChange={(newContent) => setFormData({...formData, content: newContent})}
+                        placeholder="Mulai menulis artikel menarik..."
+                    />
+                </div>
+                
+                {/* Helper text */}
+                <p className="text-xs text-gray-500 mt-2">
+                    Tips: Gunakan toolbar untuk formatting dan sisipkan gambar (Base64).
+                </p>
               </div>
+              {/* ✅ SELESAI PERUBAHAN */}
+
             </div>
 
             {/* Kolom Kanan: Metadata & Aksi */}
