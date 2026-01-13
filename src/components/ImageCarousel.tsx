@@ -32,12 +32,12 @@ export default function ImageCarousel() {
     // UBAH: Tambahkan 'relative' agar progress bar bisa diposisikan absolut terhadap kontainer ini
     <div className="w-full h-full relative"> {/* Kontainer ini harus mendapatkan tinggi dari parent */}
       <Slider {...settings} className="h-full"> {/* PERBAIKI: Tambahkan h-full ke Slider */}
-        {/* Slide 1: hawa trans.jpg (tetap dipertahankan) */}
+        {/* Slide 1: hawa trans.jpeg (tetap dipertahankan) */}
         {/* PERBAIKI: Menggunakan aspect-ratio untuk ukuran yang konsisten */}
         <div className="w-full">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
             <img
-              src="/images/hawa%20trans.jpg"
+              src="/images/hawa%20trans.jpeg"
               alt="Hawatrans.id"
               className="absolute inset-0 w-full h-full object-cover"
             />
