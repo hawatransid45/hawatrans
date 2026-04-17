@@ -163,7 +163,7 @@
   },
   "aboutPage": {
     "title": "会社概要",
-    "description": "ジャカルタにある宣誓および非宣誓の言語翻訳サービスオフィス、<strong>HAWATRANS.ID</strong>のウェブサイトへようこそ。私たちは、プロフェッショナルな翻訳、アポスティーユ、および文書合法化サービスの提供者です。私たちは、口頭翻訳（通訳）と文書翻訳/合法化の両方において、さまざまな言語および文書の分野で専門的で経験豊富な翻訳事務所です。私たちは、会社の文書だけでなく、個人文書の翻訳サービスも提供しています。",
+    "description": "ジャカルタにある宣誓および非宣誓の言語翻訳サービスオフィス、<strong>Hawatrans</strong>のウェブサイトへようこそ。私たちは、プロフェッショナルな翻訳、アポスティーユ、および文書合法化サービスの提供者です。私たちは、口頭翻訳（通訳）と文書翻訳/合法化の両方において、さまざまな言語および文書の分野で専門的で経験豊富な翻訳事務所です。私たちは、会社の文書だけでなく、個人文書の翻訳サービスも提供しています。",
     "languagesAvailable": "利用可能な言語",
     "docsTranslated": "翻訳された文書",
     "clientSatisfaction": "顧客満足度",
@@ -181,7 +181,7 @@
   },
   "contactPage": {
     "title": "お問い合わせ",
-    "company": "Hawatrans.id",
+    "company": "Hawatrans",
     "subtitle": "翻訳および関連サービス 南ジャカルタ",
     "phone": "電話",
     "email": "メール",
@@ -197,7 +197,7 @@
   },
   "servicesContact": {
     "title": "お問い合わせ :",
-    "company": "Hawatrans.id",
+    "company": "Hawatrans",
     "subtitle": "迅速で信頼性の高い文書合法化および翻訳サービスソリューション。",
     "address": "住所：",
     "addressValue": "Jl. Swadaya 2 Tanjung Barat, Jagakarsa, 南ジャカルタ",
@@ -208,7 +208,7 @@
     "email2": "Email2: hawatranslation@gmail.com"
   },
   "footer": {
-    "company": "Hawatrans.id",
+    "company": "Hawatrans",
     "tagline": "迅速で信頼性の高い文書合法化および翻訳サービスソリューション。",
     "quickLinks": "クイックリンク",
     "services": "サービス",

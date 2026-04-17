@@ -21,7 +21,7 @@
   },
   "aboutPage": {
     "title": "Tentang Kami",
-    "description": "Selamat datang di website kami <strong>HAWATRANS.ID</strong> yang merupakan kantor jasa penerjemah Bahasa tersumpah dan tidak tersumpah di Jakarta, kami sebagai penyedia layanan jasa Penerjemah, Apostile dan Legalisasi Dokumen profesional. Kami merupakan kantor penerjemah profesional dan berpengalaman dalam berbagai bidang Bahasa dan Dokumen baik penerjemah lisan maupun Penerjemah/Legalisasi dokumen. Kami memberikan layanan / jasa penerjemah dokumen Perusahaan serta dokumen pribadi.",
+    "description": "Selamat datang di website kami <strong>Hawatrans</strong> yang merupakan kantor jasa penerjemah Bahasa tersumpah dan tidak tersumpah di Jakarta, kami sebagai penyedia layanan jasa Penerjemah, Apostile dan Legalisasi Dokumen profesional. Kami merupakan kantor penerjemah profesional dan berpengalaman dalam berbagai bidang Bahasa dan Dokumen baik penerjemah lisan maupun Penerjemah/Legalisasi dokumen. Kami memberikan layanan / jasa penerjemah dokumen Perusahaan serta dokumen pribadi.",
     "languagesAvailable": "Bahasa Tersedia",
     "docsTranslated": "Dokumen Diterjemahkan",
     "clientSatisfaction": "Kepuasan Klien",
@@ -142,7 +142,7 @@
   },
   "servicesContact": {
     "title": "Hubungi Kami",
-    "company": "Hawatrans.id",
+    "company": "Hawatrans",
     "subtitle": "Solusi layanan legalitas dokumen dan penerjemahan yang cepat & terpercaya.",
     "address": "Alamat:",
     "addressValue": "Jl. Swadaya 2 Tanjung Barat, Jagakarsa, Jakarta Selatan",
@@ -181,7 +181,7 @@
   },
   "contactPage": {
     "title": "Hubungi Kami",
-    "company": "Hawatrans.id",
+    "company": "Hawatrans",
     "subtitle": "Jasa Penerjemah & Layanan Terkait Jakarta Selatan",
     "phone": "Telepon:",
     "email": "Email:",
@@ -208,7 +208,7 @@
     "heroSlogan": "Jasa Penerjemahan & Legalisasi Profesional"
   },
   "footer": {
-    "company": "Hawatrans.id",
+    "company": "Hawatrans",
     "tagline": "Solusi layanan legalitas dokumen dan penerjemahan yang cepat & terpercaya.",
     "quickLinks": "Tautan Cepat",
     "services": "Layanan",
