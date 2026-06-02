@@ -20,7 +20,7 @@ export async function GET() {
         whatsappNumber: '6281224000088',
         whatsappNumberFormatted: '+62 812-2400-0088',
         email: 'info@hawatrans.id',
-        address: 'Jakarta, Indonesia'
+        address: 'Jl. H. Saidi No.30 B, RT.7/RW.5, Tj. Barat, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12530'
       });
     }
     

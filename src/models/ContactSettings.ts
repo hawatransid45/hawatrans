@@ -25,7 +25,7 @@ const ContactSettingsSchema = new Schema<IContactSettings>({
   },
   address: {
     type: String,
-    default: 'Jakarta, Indonesia'
+    default: 'Jl. H. Saidi No.30 B, RT.7/RW.5, Tj. Barat, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12530'
   },
   updatedAt: {
     type: Date,

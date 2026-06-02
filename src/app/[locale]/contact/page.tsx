@@ -15,7 +15,7 @@ export default function ContactPage() {
   const [whatsappNumber, setWhatsappNumber] = useState('6281588333382');
   const [whatsappNumberFormatted, setWhatsappNumberFormatted] = useState('+62 815-8833-382');
   const [email, setEmail] = useState('hawatrans@yahoo.com');
-  const [address, setAddress] = useState('Jl. Swadaya II RT.001/006 No.70 Tanjung Barat, Jagakarsa, Jakarta Selatan 12530');
+  const [address, setAddress] = useState('Jl. H. Saidi No.30 B, RT.7/RW.5, Tj. Barat, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12530');
   
   // State untuk edit mode
   const [editingContact, setEditingContact] = useState(false);
@@ -23,7 +23,7 @@ export default function ContactPage() {
     whatsappNumber: '6281588333382',
     whatsappNumberFormatted: '+62 815-8833-382',
     email: 'hawatrans@yahoo.com',
-    address: 'Jl. Swadaya II RT.001/006 No.70 Tanjung Barat, Jagakarsa, Jakarta Selatan 12530'
+    address: 'Jl. H. Saidi No.30 B, RT.7/RW.5, Tj. Barat, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12530'
   });
 
   // Load contact settings dari database
@@ -44,12 +44,12 @@ export default function ContactPage() {
           setWhatsappNumber(data.data.whatsappNumber);
           setWhatsappNumberFormatted(data.data.whatsappNumberFormatted);
           setEmail(data.data.email || 'hawatrans@yahoo.com');
-          setAddress(data.data.address || 'Jl. Swadaya II RT.001/006 No.70 Tanjung Barat, Jagakarsa, Jakarta Selatan 12530');
+          setAddress(data.data.address || 'Jl. H. Saidi No.30 B, RT.7/RW.5, Tj. Barat, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12530');
           setContactFormData({
             whatsappNumber: data.data.whatsappNumber,
             whatsappNumberFormatted: data.data.whatsappNumberFormatted,
             email: data.data.email || 'hawatrans@yahoo.com',
-            address: data.data.address || 'Jl. Swadaya II RT.001/006 No.70 Tanjung Barat, Jagakarsa, Jakarta Selatan 12530'
+            address: data.data.address || 'Jl. H. Saidi No.30 B, RT.7/RW.5, Tj. Barat, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12530'
           });
         }
       } catch (error) {
@@ -145,7 +145,7 @@ export default function ContactPage() {
                     <textarea 
                       value={contactFormData.address}
                       onChange={(e) => setContactFormData({...contactFormData, address: e.target.value})}
-                      placeholder="Jl. Swadaya II RT.001/006 No.70..."
+                      placeholder="Jl. H. Saidi No.30 B, RT.7/RW.5..."
                       rows={3}
                       className="w-full px-3 py-2 border rounded-lg text-sm text-black bg-white focus:ring-2 focus:ring-[#e83d96]"
                     />
@@ -242,7 +242,7 @@ export default function ContactPage() {
             {/* Peta Lokasi */}
             <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200/80 h-full lg:col-span-3">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.694668269643!2d106.83699497474616!3d-6.303944993685036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed5df538336d%3A0x8494241594a4374!2sJl.%20Swadaya%20II%2C%20RT.1%2FRW.6%2C%20Tj.%20Bar.%2C%20Kec.%20Jagakarsa%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012530!5e0!3m2!1sen!2sid!4v1716543210987!5m2!1sen!2sid" 
+                src="https://www.google.com/maps?q=Jl.%20H.%20Saidi%20No.30%20B%2C%20RT.7%2FRW.5%2C%20Tj.%20Barat%2C%20Kec.%20Jagakarsa%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012530&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
