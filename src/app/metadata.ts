@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   metadataBase: new URL('https://hawatrans.id'),
   title: {
-    default: 'Hawatrans.id - Solusi Bisnis Inovatif',
-    template: '%s | Hawatrans.id'
+    default: 'Hawa Trans Indonesia - Solusi Bisnis Inovatif',
+    template: '%s | Hawa Trans Indonesia'
   },
   description: 'We deliver innovative solutions for your business. Digital transformation, consulting, and strategic planning services.',
   keywords: ['business solutions', 'digital transformation', 'consulting', 'innovation', 'technology', 'AI', 'machine learning', 'cloud computing', 'cybersecurity'],
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   creator: 'Company',
   publisher: 'Company',
   icons: {
-    icon: '/images/logo hawatrans.jpeg', // atau path ke logo Anda
+    icon: '/images/logo hawatrans.jpeg', // atau path ke logo Hawa Trans Indonesia
     shortcut: '/images/logo hawatrans.jpeg',
     apple: '/images/logo hawatrans.jpeg',
   },

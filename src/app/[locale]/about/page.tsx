@@ -73,7 +73,7 @@ export default function AboutPage() {
               <div className="flex justify-center lg:justify-end h-full">
                 <img 
                   src="/images/hawatrans%205.jpeg" 
-                  alt="Hawatrans Official Sworn Translator" 
+                  alt="Hawa Trans Indonesia Official Sworn Translator" 
                   className="rounded-2xl shadow-2xl w-full h-full max-w-xs object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>

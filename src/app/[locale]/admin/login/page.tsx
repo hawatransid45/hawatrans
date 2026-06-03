@@ -42,7 +42,7 @@ export default function AdminLoginPage() {
       }}>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <div className="relative h-full flex flex-col justify-end p-12 text-white">
-          <h1 className="text-4xl font-bold leading-tight">Hawatrans</h1>
+          <h1 className="text-4xl font-bold leading-tight">Hawa Trans Indonesia</h1>
           <p className="mt-2 text-lg text-gray-200">{t('heroSlogan')}</p>
         </div>
       </div>

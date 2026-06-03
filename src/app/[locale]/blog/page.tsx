@@ -128,7 +128,7 @@ export default function BlogPage() {
                       {/* Image Thumbnail */}
                       <div className="relative overflow-hidden">
                         <img 
-                          src="https://placehold.co/600x400/e83d96/white?text=Hawatrans" 
+                          src="https://placehold.co/600x400/e83d96/white?text=Hawa+Trans+Indonesia" 
                           alt={post.title} 
                           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
                         />

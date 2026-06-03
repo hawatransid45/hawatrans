@@ -29,8 +29,8 @@ export default function Navigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-              <img src="/images/hawa-rbg.png" alt="Hawatrans Logo" className="h-10 w-10 object-contain" />
-              <span className="text-xl sm:text-2xl font-bold text-gray-900">Hawatrans</span>
+              <img src="/images/hawa-rbg.png" alt="Hawa Trans Indonesia Logo" className="h-10 w-10 object-contain" />
+              <span className="text-xl sm:text-2xl font-bold text-gray-900">Hawa Trans Indonesia</span>
             </Link>
           </div>
 

@@ -163,7 +163,7 @@
   },
   "aboutPage": {
     "title": "회사 소개",
-    "description": "자카르타에 위치한 선서 및 비선서 언어 번역 서비스 사무소인 <strong>Hawatrans</strong> 웹사이트에 오신 것을 환영합니다. 저희는 전문적인 번역, 아포스티유 및 문서 합법화 서비스 제공업체입니다. 저희는 구두 번역(통역)과 문서 번역/합법화 모두에서 다양한 언어 및 문서 분야의 전문적이고 경험이 풍부한 번역 사무소입니다. 저희는 회사 문서뿐만 아니라 개인 문서에 대한 번역 서비스도 제공합니다.",
+    "description": "자카르타에 위치한 선서 및 비선서 언어 번역 서비스 사무소인 <strong>Hawa Trans Indonesia</strong> 웹사이트에 오신 것을 환영합니다. 저희는 전문적인 번역, 아포스티유 및 문서 합법화 서비스 제공업체입니다. 저희는 구두 번역(통역)과 문서 번역/합법화 모두에서 다양한 언어 및 문서 분야의 전문적이고 경험이 풍부한 번역 사무소입니다. 저희는 회사 문서뿐만 아니라 개인 문서에 대한 번역 서비스도 제공합니다.",
     "languagesAvailable": "사용 가능 언어",
     "docsTranslated": "번역된 문서",
     "clientSatisfaction": "고객 만족도",
@@ -181,7 +181,7 @@
   },
   "contactPage": {
     "title": "문의하기",
-    "company": "Hawatrans",
+    "company": "Hawa Trans Indonesia",
     "subtitle": "번역 및 관련 서비스 남부 자카르타",
     "phone": "전화",
     "email": "이메일",
@@ -197,7 +197,7 @@
   },
   "servicesContact": {
     "title": "문의하기 :",
-    "company": "Hawatrans",
+    "company": "Hawa Trans Indonesia",
     "subtitle": "빠르고 신뢰할 수 있는 문서 합법화 및 번역 서비스 솔루션.",
     "address": "주소:",
     "addressValue": "Jl. H. Saidi No.30 B, RT.7/RW.5, Tj. Barat, Kec. Jagakarsa, 남부 자카르타, 자카르타 특별수도지역 12530",
@@ -208,7 +208,7 @@
     "email2": "Email2: hawatranslation@gmail.com"
   },
   "footer": {
-    "company": "Hawatrans",
+    "company": "Hawa Trans Indonesia",
     "tagline": "빠르고 신뢰할 수 있는 문서 합법화 및 번역 서비스 솔루션.",
     "quickLinks": "바로가기",
     "services": "서비스",

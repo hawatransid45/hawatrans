@@ -164,7 +164,7 @@
   },
   "aboutPage": {
     "title": "关于我们",
-    "description": "欢迎访问我们的网站 <strong>Hawatrans</strong>，这是一家位于雅加达的宣誓和非宣誓语言翻译服务办公室。我们是专业的翻译、加签和文件合法化服务提供商。我们是一家在各种语言和文件领域拥有专业知识和丰富经验的翻译办公室，无论是口译还是文件翻译/合法化。我们为公司文件和个人文件提供翻译服务。",
+    "description": "欢迎访问我们的网站 <strong>Hawa Trans Indonesia</strong>，这是一家位于雅加达的宣誓和非宣誓语言翻译服务办公室。我们是专业的翻译、加签和文件合法化服务提供商。我们是一家在各种语言和文件领域拥有专业知识和丰富经验的翻译办公室，无论是口译还是文件翻译/合法化。我们为公司文件和个人文件提供翻译服务。",
     "languagesAvailable": "可用语言",
     "docsTranslated": "已翻译文件",
     "clientSatisfaction": "客户满意度",
@@ -182,7 +182,7 @@
   },
   "contactPage": {
     "title": "联系我们",
-    "company": "Hawatrans",
+    "company": "Hawa Trans Indonesia",
     "subtitle": "翻译及相关服务 南雅加达",
     "phone": "电话",
     "email": "电子邮件",
@@ -198,7 +198,7 @@
   },
   "servicesContact": {
     "title": "联系我们 :",
-    "company": "Hawatrans",
+    "company": "Hawa Trans Indonesia",
     "subtitle": "快速可靠的文书合法化和翻译服务解决方案。",
     "address": "地址：",
     "addressValue": "Jl. H. Saidi No.30 B, RT.7/RW.5, Tj. Barat, Kec. Jagakarsa, 南雅加达, 雅加达首都特区 12530",
@@ -209,7 +209,7 @@
     "email2": "Email2: hawatranslation@gmail.com"
   },
   "footer": {
-    "company": "Hawatrans",
+    "company": "Hawa Trans Indonesia",
     "tagline": "快速可靠的文书合法化和翻译服务解决方案。",
     "quickLinks": "快速链接",
     "services": "服务",

@@ -493,7 +493,7 @@ export default function ServicesPage() {
             <div className="mt-4 h-1 w-24 bg-pink-200 mx-auto rounded-full"></div>
           </div>
 
-          {/* Gambar Hawatrans 3 di Tengah */}
+          {/* Gambar Hawa Trans Indonesia 3 di Tengah */}
           <div className="mb-12 flex justify-center">
             <img 
               src="/images/hawatrans%203.jpeg" 

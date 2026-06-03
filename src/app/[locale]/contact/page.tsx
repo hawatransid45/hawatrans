@@ -112,7 +112,7 @@ export default function ContactPage() {
             <div className="w-full bg-white p-6 rounded-xl shadow-lg border border-gray-200/80 flex flex-col h-full lg:col-span-2">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
-                  <img src="/images/hawa-rbg.png" alt="Hawatrans Logo" className="h-10 w-10 object-contain" />
+                  <img src="/images/hawa-rbg.png" alt="Hawa Trans Indonesia Logo" className="h-10 w-10 object-contain" />
                   <h2 className="text-2xl font-bold text-gray-800">{t('company')}</h2>
                 </div>
                 {isAuthenticated && (

@@ -38,24 +38,24 @@ export default function ImageCarousel() {
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
             <img
               src="/images/hawa%20trans.jpeg"
-              alt="Hawatrans.id"
+              alt="Hawa Trans Indonesia"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
         </div>
 
-        {/* Slide 2: hawatrans 1.jpeg */}
+        {/* Slide 2: Hawa Trans Indonesia 1.jpeg */}
         <div className="w-full">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
             <img
               src="/images/hawatrans%201.jpeg"
-              alt="Hawatrans Profesional"
+              alt="Hawa Trans Indonesia Profesional"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
         </div>
 
-        {/* Slide 3: hawatrans 2.jpeg */}
+        {/* Slide 3: Hawa Trans Indonesia 2.jpeg */}
         <div className="w-full">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
             <img
@@ -66,7 +66,7 @@ export default function ImageCarousel() {
           </div>
         </div>
 
-        {/* Slide 4: hawatrans 4.jpeg */}
+        {/* Slide 4: Hawa Trans Indonesia 4.jpeg */}
         <div className="w-full">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
             <img

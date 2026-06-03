@@ -85,7 +85,7 @@ function EditBlogContent() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-500"></div>
-        <p className="text-2xl font-bold text-[#e83d96]">Hawatrans</p>
+        <p className="text-2xl font-bold text-[#e83d96]">Hawa Trans Indonesia</p>
       </div>
     );
   }
