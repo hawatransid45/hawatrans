@@ -181,7 +181,7 @@ export default async function HomePage({params}: Props) {
                 {t('contactUs')}
               </Link>
               <a 
-                href="https://wa.me/628158833382"
+                href="https://wa.me/6285121341010"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-green-600 transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-105 text-base sm:text-lg flex items-center justify-center gap-2"

@@ -446,7 +446,7 @@ export default function ServicesPage() {
   };
 
   const openWhatsApp = () => {
-    window.open(`https://wa.me/628158833382`, '_blank');
+    window.open(`https://wa.me/6285121341010`, '_blank');
   };
 
   // Fungsi untuk save contact settings
