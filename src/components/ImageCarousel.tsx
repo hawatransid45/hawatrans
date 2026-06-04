@@ -37,7 +37,7 @@ export default function ImageCarousel() {
         <div className="w-full">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
             <img
-              src="/images/hawatrans update.png"
+              src="/images/hawatrans revisi.png"
               alt="Hawa Trans Indonesia"
               className="absolute inset-0 w-full h-full object-cover"
             />
