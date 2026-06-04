@@ -215,6 +215,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-800 text-base">{t('email')}</h3>
                       <p className="text-gray-600 text-sm break-all">{email}</p>
+                      <p className="text-gray-600 text-sm break-all">hawatrans@yahoo.com</p>
                       <p className="text-gray-600 text-sm break-all">hawatranslations@gmail.com</p>
                     </div>
                   </div>
