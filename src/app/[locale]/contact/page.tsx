@@ -237,6 +237,9 @@ export default function ContactPage() {
                   <div className="bg-gray-50 p-3 rounded-lg shadow-sm flex justify-center items-center w-28 h-16">
                     <img src="/images/mandiri.png" alt="Bank Mandiri" className="h-10 object-contain" />
                   </div>
+                  <div className="bg-gray-50 p-3 rounded-lg shadow-sm flex justify-center items-center w-28 h-16">
+                    <img src="/images/cimb.png" alt="Bank CIMB Niaga" className="h-10 object-contain" />
+                  </div>
                 </div>
               </div>
             </div>

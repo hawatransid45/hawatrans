@@ -106,13 +106,13 @@ export default function ServicesPage() {
   const [legalizationHtml, setLegalizationHtml] = useState(defaultLegalizationContent);
   const [apostilleHtml, setApostilleHtml] = useState(defaultApostilleContent);
   
-  // State untuk Contact Settings
-  const [whatsappNumber, setWhatsappNumber] = useState('6281224000088');
-  const [whatsappNumberFormatted, setWhatsappNumberFormatted] = useState('+62 812-2400-0088');
+  // State untuk Contact Settings - DIUBAH KE NOMOR DEFAULT YANG BENAR
+  const [whatsappNumber, setWhatsappNumber] = useState('6285121341010');
+  const [whatsappNumberFormatted, setWhatsappNumberFormatted] = useState('+62 851-2134-1010');
   const [editingContact, setEditingContact] = useState(false);
   const [contactFormData, setContactFormData] = useState({
-    whatsappNumber: '6281224000088',
-    whatsappNumberFormatted: '+62 812-2400-0088'
+    whatsappNumber: '6285121341010',
+    whatsappNumberFormatted: '+62 851-2134-1010'
   });
   
   const [activeTab, setActiveTab] = useState(0);
@@ -136,24 +136,20 @@ export default function ServicesPage() {
         const data = await response.json();
         
         if (data.success && data.data && data.data.length > 0) {
-          // Filter dan validate data - pastikan semua punya ID
           const validServices = data.data
-            .filter((s: TranslationService) => s.id && s.language) // Hanya ambil yang punya id dan language
+            .filter((s: TranslationService) => s.id && s.language)
             .map((s: TranslationService, index: number) => ({
               ...s,
-              id: s.id || `fallback-${index}`, // Fallback ID jika tidak ada
-              number: s.number || index + 1 // Fallback number
+              id: s.id || `fallback-${index}`,
+              number: s.number || index + 1
             }));
           
           if (validServices.length > 0) {
             setServices(validServices);
           } else {
-            // Jika semua data invalid, gunakan default saja (JANGAN auto-save)
             setServices(defaultServices);
           }
         } else {
-          // Jika database kosong, gunakan default saja (JANGAN auto-save)
-          // Admin bisa klik "Reset Data" jika mau save default services
           setServices(defaultServices);
         }
       } catch (error) {
@@ -273,15 +269,14 @@ export default function ServicesPage() {
         ? { 
             ...s, 
             language: serviceFormData.language,
-            generalPrice: 'Hubungi WA', // Keep default
-            swornPrice: 'Hubungi WA' // Keep default
+            generalPrice: 'Hubungi WA',
+            swornPrice: 'Hubungi WA'
           }
         : s
     );
     
     setServices(updatedServices);
     
-    // Save to database
     try {
       const response = await fetch('/api/services/prices', {
         method: 'POST',
@@ -318,12 +313,11 @@ export default function ServicesPage() {
       id: new Date().toISOString(),
       number: services.length + 1,
       language: newServiceData.language,
-      generalPrice: 'Hubungi WA', // Default value
-      swornPrice: 'Hubungi WA' // Default value
+      generalPrice: 'Hubungi WA',
+      swornPrice: 'Hubungi WA'
     };
     const updatedServices = [...services, newService];
     
-    // Save to database
     try {
       const response = await fetch('/api/services/prices', {
         method: 'POST',
@@ -334,7 +328,6 @@ export default function ServicesPage() {
       const data = await response.json();
       
       if (data.success) {
-        // Update state dengan data dari database
         setServices(updatedServices);
         setIsAdding(false);
         setNewServiceData({ language: '', generalPrice: '', swornPrice: '' });
@@ -352,11 +345,10 @@ export default function ServicesPage() {
     if (window.confirm(t('alertDeleteConfirm'))) {
       const updatedServices = services
         .filter(s => s.id !== id)
-        .map((s, index) => ({ ...s, number: index + 1 })); // Re-number services
+        .map((s, index) => ({ ...s, number: index + 1 }));
       
       setServices(updatedServices);
       
-      // Save to database
       try {
         await fetch('/api/services/prices', {
           method: 'POST',
@@ -389,7 +381,6 @@ export default function ServicesPage() {
     if (lang.includes('vietnam')) return 'VN';
     if (lang.includes('thailand')) return 'TH';
     
-    // Default: ambil 2 huruf pertama dari nama bahasa (uppercase)
     return language.substring(0, 2).toUpperCase();
   };
 
@@ -408,7 +399,6 @@ export default function ServicesPage() {
     if (lang.includes('italia')) return 'bg-teal-600';
     if (lang.includes('vietnam')) return 'bg-cyan-600';
     if (lang.includes('thailand')) return 'bg-purple-600';
-    // Default: warna acak berdasarkan panjang nama
     const colors = ['bg-blue-600', 'bg-green-600', 'bg-red-600', 'bg-yellow-600', 'bg-indigo-600', 'bg-pink-600'];
     return colors[language.length % colors.length];
   };
@@ -443,10 +433,6 @@ export default function ServicesPage() {
       alert('Failed to save content. Please try again.');
       return false;
     }
-  };
-
-  const openWhatsApp = () => {
-    window.open(`https://wa.me/6285121341010`, '_blank');
   };
 
   // Fungsi untuk save contact settings
@@ -555,26 +541,26 @@ export default function ServicesPage() {
                             <style jsx global>{`
                               .prose-container ol {
                                 list-style-type: decimal;
-                                margin-left: 1.25rem; /* ml-5 */
-                                margin-bottom: 1rem; /* mb-4 */
-                                padding-left: 0; /* Override default Quill padding */
+                                margin-left: 1.25rem;
+                                margin-bottom: 1rem;
+                                padding-left: 0;
                               }
                               .prose-container li {
-                                margin-bottom: 0.25rem; /* mb-1 */
-                                color: #4b5563; /* text-gray-600 */
+                                margin-bottom: 0.25rem;
+                                color: #4b5563;
                               }
                               .prose-container strong {
-                                color: #1f2937; /* text-gray-800 */
+                                color: #1f2937;
                               }
                               .prose-container p span[style*="background-color: rgb(255, 255, 0)"] {
-                                background-color: #fffbeb; /* yellow-50 */
-                                border-left: 4px solid #fcd34d; /* yellow-500 */
-                                padding: 1rem; /* p-4 */
-                                border-radius: 0.5rem; /* rounded-lg */
-                                display: block; /* Ensure it takes full width */
+                                background-color: #fffbeb;
+                                border-left: 4px solid #fcd34d;
+                                padding: 1rem;
+                                border-radius: 0.5rem;
+                                display: block;
                                 font-style: italic;
-                                margin-top: 1rem; /* mt-4 */
-                                margin-bottom: 1rem; /* mb-4 */
+                                margin-top: 1rem;
+                                margin-bottom: 1rem;
                               }
                             `}</style>
                           </div>
@@ -676,10 +662,10 @@ export default function ServicesPage() {
                                 type="text" 
                                 value={contactFormData.whatsappNumber}
                                 onChange={(e) => setContactFormData({...contactFormData, whatsappNumber: e.target.value})}
-                                placeholder="6281224000088"
+                                placeholder="6285121341010"
                                 className="w-full px-3 py-2 border rounded-lg text-sm text-black bg-white focus:ring-2 focus:ring-green-500"
                               />
-                              <p className="text-xs text-gray-500 mt-1">Contoh: 6281224000088</p>
+                              <p className="text-xs text-gray-500 mt-1">Contoh: 6285121341010</p>
                             </div>
                             <div>
                               <label className="block text-xs font-semibold text-gray-700 mb-1">
@@ -689,10 +675,10 @@ export default function ServicesPage() {
                                 type="text" 
                                 value={contactFormData.whatsappNumberFormatted}
                                 onChange={(e) => setContactFormData({...contactFormData, whatsappNumberFormatted: e.target.value})}
-                                placeholder="+62 812-2400-0088"
+                                placeholder="+62 851-2134-1010"
                                 className="w-full px-3 py-2 border rounded-lg text-sm text-black bg-white focus:ring-2 focus:ring-green-500"
                               />
-                              <p className="text-xs text-gray-500 mt-1">Contoh: +62 812-2400-0088</p>
+                              <p className="text-xs text-gray-500 mt-1">Contoh: +62 851-2134-1010</p>
                             </div>
                             <button 
                               onClick={handleSaveContactSettings}
@@ -722,12 +708,10 @@ export default function ServicesPage() {
                           onClick={async () => {
                             if (confirm('⚠️ Reset semua data ke default? Semua perubahan akan hilang!')) {
                               try {
-                                // Reset state dulu
                                 setServices(defaultServices);
                                 setEditingServiceId(null);
                                 setServiceFormData({ language: '', generalPrice: '', swornPrice: '' });
                                 
-                                // Kemudian save ke database
                                 const response = await fetch('/api/services/prices', {
                                   method: 'POST',
                                   headers: { 'Content-Type': 'application/json' },
@@ -738,7 +722,6 @@ export default function ServicesPage() {
                                 
                                 if (data.success) {
                                   alert('✅ Data berhasil di-reset ke default!');
-                                  // Reload halaman untuk memastikan data fresh
                                   window.location.reload();
                                 } else {
                                   alert('❌ Gagal reset data: ' + (data.error || 'Unknown error'));
@@ -762,12 +745,11 @@ export default function ServicesPage() {
                     {/* Daftar Harga - Desain Kartu Baru */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {services
-                        .filter(s => s.id && s.language) // Extra safety: filter out invalid services
+                        .filter(s => s.id && s.language)
                         .map((service) => {
                         const isEditing = editingServiceId === service.id;
                         
                         if (isEditing) {
-                          // Form Edit - Tampilkan HANYA ini
                           return (
                             <div key={`edit-${service.id}`} className="bg-white p-4 rounded-xl border-2 border-[#e83d96] shadow-lg col-span-1 sm:col-span-2 lg:col-span-3">
                               <div className="bg-pink-50 px-4 py-2 -mx-4 -mt-4 mb-4 rounded-t-xl border-b-2 border-[#e83d96]">
@@ -794,10 +776,9 @@ export default function ServicesPage() {
                           );
                         }
                         
-                        // Tampilan Kartu Normal
+                        // Tampilan Kartu Normal dengan Fitur Teks Dinamis Berdasarkan Bahasa
                         return (
                           <div key={`card-${service.id}`} className="group relative bg-white p-4 rounded-xl border border-gray-200/80 overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-[#e83d96]/50">
-                            {/* Konten Utama */}
                             <div className="flex items-center justify-between gap-4">
                               <div className="flex items-center gap-4">
                                 <div className={`${getBadgeColor(service.language)} text-white font-bold px-3 py-2 rounded-lg text-sm min-w-[70px] text-center shadow-md`}>
@@ -806,9 +787,9 @@ export default function ServicesPage() {
                                 <span className="font-semibold text-gray-800 text-md">{service.language}</span>
                               </div>
                               
-                              {/* Tombol WhatsApp - Selalu Terlihat */}
+                              {/* TAUTAN WHATSAPP DIUBAH MENJADI DINAMIS MENYESUAIKAN BAHASA */}
                               <a 
-                                href={`https://wa.me/${whatsappNumber}?text=Halo,%20saya%20ingin%20tanya%20harga%20terjemahan%20bahasa%20${encodeURIComponent(service.language)}`}
+                                href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(`Halo, saya ingin tanya harga terjemahan bahasa ${service.language}`)}`}
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-all duration-300 text-sm font-semibold shadow-md hover:shadow-lg"
@@ -820,7 +801,7 @@ export default function ServicesPage() {
                               </a>
                             </div>
 
-                            {/* Admin Controls - Hanya untuk Admin */}
+                            {/* Admin Controls */}
                             {isAuthenticated && (
                               <div className="flex gap-2 mt-3 pt-3 border-t">
                                 <button onClick={() => handleEditService(service)} className="text-gray-400 hover:text-[#e83d96] p-1 rounded-md transition-colors text-sm">✏️ Edit</button>
@@ -853,7 +834,7 @@ export default function ServicesPage() {
                       <p className="text-sm text-gray-800 font-semibold">
                         💬 Untuk informasi harga terjemahan, silakan hubungi kami via WhatsApp di{' '}
                         <a 
-                          href={`https://wa.me/${whatsappNumber}`}
+                          href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent('Halo, saya ingin tanya informasi harga terjemahan dokumen.')}`}
                           target="_blank" 
                           rel="noopener noreferrer" 
                           className="text-green-600 hover:underline font-bold"
