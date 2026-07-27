@@ -35,12 +35,14 @@ export default function Footer() {
           </div>
 
           {/* Kolom 3: Alamat */}
+          {/* Alamat ditiadakan dulu sementara
           <div className="flex flex-col items-center">
             <h3 className="text-lg font-semibold text-gray-900">{t('addressTitle')}</h3>
             <p className="mt-4 text-gray-600 max-w-xs">
               {t('addressValue')}
             </p>
           </div>
+          */}
         </div>
 
         {/* Baris Ketiga: Copyright */}

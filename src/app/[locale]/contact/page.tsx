@@ -244,6 +244,7 @@ export default function ContactPage() {
               </div>
             </div>
             {/* Peta Lokasi */}
+            {/* Peta Lokasi sementara dinonaktifkan
             <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200/80 h-full lg:col-span-3">
               <iframe 
                 src="https://www.google.com/maps?q=Jl.%20H.%20Saidi%20No.30%20B%2C%20RT.7%2FRW.5%2C%20Tj.%20Barat%2C%20Kec.%20Jagakarsa%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012530&output=embed" 
@@ -254,7 +255,7 @@ export default function ContactPage() {
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade">
               </iframe>
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
