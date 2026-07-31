@@ -1,3 +1,4 @@
+import GclidTracker from '@/components/GclidTracker';
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {setRequestLocale} from 'next-intl/server';
@@ -59,6 +60,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{display: 'none', visibility: 'hidden'}}
           />
         </noscript>
+        <GclidTracker />
         <NextIntlClientProvider messages={messages} locale={locale}>
           <AuthProvider>
             <BlogProvider>
